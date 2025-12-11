@@ -1,0 +1,22 @@
+TC ID,Module,Test Scenario,Pre-Condition,Test Steps,Expected Result,Priority
+TC_CART_01,Cart,Add item to cart,User logged in,Click “Add to Cart”,Item added successfully,High
+TC_CART_02,Cart,Add multiple items,Logged in,Add 3 different items,All items appear in cart,High
+TC_CART_03,Cart,Remove item from cart,Items present,Click delete icon,Item removed,Medium
+TC_CART_04,Cart,Update quantity,Item present,Change qty 1?2,Total updates correctly,High
+TC_CART_05,Cart,Add out-of-stock item,Item OOS,Add to cart,Error: “Item out of stock”,High
+TC_CART_06,Cart,Cart persists after refresh,Logged in,Add item ? refresh,Items still present,Medium
+TC_CART_07,Cart,Cart persists after logout/login,"User logged out, then back",Re-login,Cart restored,Medium
+TC_CART_08,Cart,Apply valid coupon,Coupon active,Enter coupon ? Apply,Discount applied,Medium
+TC_CART_09,Cart,Invalid coupon,None,Enter invalid coupon,Error shown,Low
+TC_CART_10,Checkout,Successful checkout,Cart has items,Proceed to checkout ? Fill form ? Pay,Order placed successfully,High
+TC_CART_11,Checkout,Checkout without address,No address added,Click “Place Order”,Error: Add address,High
+TC_CART_12,Checkout,Payment failure handling,Payment mocked,Click Pay ? Failure,Error shown; order not placed,High
+TC_CART_13,Checkout,Verify order summary,Items in cart,Open summary,All details correct,Medium
+TC_CART_14,Checkout,UI validation,None,"Check layout, button states",UI elements correct,Low
+TC_CART_15,Checkout,Session timeout mid-checkout,Session expired,Proceed checkout,Redirect to login,High
+TC_CART_16,Checkout,Check shipping charges calculation,Cart total > threshold,Add items,Shipping charges correct,Medium
+TC_CART_17,Checkout,Verify GST/Tax calculation,Items in cart,Proceed checkout,Tax applied correctly,Medium
+TC_CART_18,Checkout,Add multiple addresses,User logged in,Add 2 addresses,Both stored,Low
+TC_CART_19,Checkout,Select payment method,User on checkout,Choose COD/Online,Correct selection applied,Medium
+TC_CART_20,Checkout,SQL Injection attempt in address,None,Enter,Error message; safe handling,High
+,,,, OR '1'='1,,

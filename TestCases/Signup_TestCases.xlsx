@@ -1,0 +1,15 @@
+TC ID,Module,Test Scenario,Pre-Condition,Test Steps,Expected Result,Priority
+TC_SIGNUP_01,Signup,Signup with valid details,None,"Fill valid name, email, password ? Submit",Account created successfully,High
+TC_SIGNUP_02,Signup,Signup with existing email,Email already registered,Submit form,Error: “Email already in use”,High
+TC_SIGNUP_03,Signup,Weak password validation,None,Enter weak password,Validation: “Password too weak”,High
+TC_SIGNUP_04,Signup,Invalid email format,None,Enter invalid email,Validation error,Medium
+TC_SIGNUP_05,Signup,Empty fields check,None,Submit empty form,Validation messages shown,High
+TC_SIGNUP_06,Signup,Password & Confirm Password mismatch,None,Enter mismatched passwords,Error shown,Medium
+TC_SIGNUP_07,Signup,Max length validation,None,Enter 200+ chars,Error or field truncation,Low
+TC_SIGNUP_08,Signup,Terms & Conditions checkbox,None,Try submitting without checking T&C,Error: “Please accept T&C”,Medium
+TC_SIGNUP_09,Signup,Strong password accepted,None,Enter strong password,Password accepted,Medium
+TC_SIGNUP_10,Signup,Page navigation after signup,None,Complete signup,Redirect to login/dashboard,Medium
+TC_SIGNUP_11,Signup,UI validation,None,Open signup page,All fields & labels visible,Low
+TC_SIGNUP_12,Signup,API response validation via Postman,API available,Send signup request,"Status 201, proper JSON response",Medium
+TC_LOGIN_11,Login,Check input field character limits,None,Enter 200+ chars,Proper validation handling,Low
+TC_LOGIN_12,Login,Verify error disappears after correction,Incorrect credentials entered,Retry with correct data,User successfully logs in,Medium

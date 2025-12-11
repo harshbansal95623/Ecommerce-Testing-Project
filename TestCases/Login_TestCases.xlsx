@@ -1,0 +1,15 @@
+TC ID,Module,Test Scenario,Pre-Condition,Test Steps,Expected Result,Priority
+TC_LOGIN_01,Login,Login with valid credentials,User exists,1. Open login page 2. Enter valid email 3. Enter valid password 4. Click Login,User successfully logs in; redirected to dashboard,High
+TC_LOGIN_02,Login,Login with invalid password,User exists,Enter valid email + wrong password,Error message: “Invalid email or password”,High
+TC_LOGIN_03,Login,Login with invalid email format,None,Enter “abc” as email,Validation error shown,Medium
+TC_LOGIN_04,Login,Login with empty fields,None,Click Login without filling anything,"Error: “Email is required”, “Password is required”",High
+TC_LOGIN_05,Login,Password field masked,None,Enter password,Password characters masked,Low
+TC_LOGIN_06,Login,Forgot Password navigation,None,Click “Forgot Password” link,User navigates to reset page,Medium
+TC_LOGIN_07,Login,Remember Me functionality,None,Login with “Remember Me” checked,User remains logged in after reopening browser,Medium
+TC_LOGIN_08,Login,Login with unregistered email,None,Enter unregistered email,Error message displayed,Medium
+TC_LOGIN_09,Login,Verify Login button disabled before input,None,Load page,Login button disabled until mandatory fields filled,Low
+TC_LOGIN_10,Login,SQL Injection attempt,None,Enter,Error message shown; no login,High
+,,,, OR '1'='1,,
+,,,,in email/password,,
+TC_LOGIN_11,Login,Check input field character limits,None,Enter 200+ chars,Proper validation handling,Low
+TC_LOGIN_12,Login,Verify error disappears after correction,Incorrect credentials entered,Retry with correct data,User successfully logs in,Medium
